@@ -1,0 +1,34 @@
+.content{
+  width:60%;
+  float:left;
+  padding:0 0 0 30px;
+  background: #F39C12;
+  height:100%;
+}
+
+.sidebar{
+  width:40%;
+  float:right;
+  padding:10px;
+  background:#FCF3CF;
+  height:100%;
+
+}
+h2{
+  text-align:center;
+  border-bottom:1px solid #5DADE2
+}
+h1{
+  text-align:center;
+  border-bottom:1px   solid #5DADE2
+}
+body{
+  color:white;
+  background:#F39C12;
+
+}
+#date{
+  color:yellow;
+  font-size:12px;
+  font-style:italic;
+}

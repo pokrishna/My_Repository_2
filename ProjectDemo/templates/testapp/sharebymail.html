@@ -1,0 +1,15 @@
+{% extends 'testapp/base.html' %}
+{% block title_block %}Show Post By Email{% endblock %}
+  {% block content %}
+  {% if sent %}
+      <h1>Email Sucessfully Sent !!!</h1>
+      <h2>Post with the title :{{post.title}} information shared by email</h2>
+    {% else %}
+    <h2>Share Post with title :{{post.title}} By Email</h2>
+    <form mehtod='POST'>
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type='submit' value='Send Email'>
+        </form>
+  {% endif %}
+  {% endblock %}
