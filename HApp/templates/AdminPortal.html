@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT Home Automation App</title>
+    <link rel="stylesheet" type="text/css" href="HomeAutomation/CSS/css.css"/>
+    <pre align="center" ><h1 style="color: silver; font-size: 36px;">IOT Home Automation APP</h1></pre>
+
+</head>
+<body align="center" bgcolor="#008b8b" >
+<div margin="10px">
+<form action="dc" method="post"  >
+    {% csrf_token %}
+    <input type="submit" value="Device_Controler" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+<form action="cu" method="post"  >
+    {% csrf_token %}
+    <input type="submit" value="CreateUser" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+
+<form action="ul" method="post"  >
+    {% csrf_token %}
+    <input type="submit" value="User List" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+<form action="dl" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Devices List" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+    </div>
+<div margin="20px">
+<form action="ad" method="post">
+    {% csrf_token %}
+    <input type="submit" value="AddDevices" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+<form action="dd" method="post">
+    {% csrf_token %}
+    <input type="submit" value="DeleteDevices" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+<form action="upda" method="post">
+    {% csrf_token %}
+    <input type="submit" value="UpdateDevices" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+<form action="atd" method="post">
+    {% csrf_token %}
+    <input type="submit" value="ActiveDevicesStatus" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+<form action="iatd" method="post">
+    {% csrf_token %}
+    <input type="submit" value="InactiveDevicesStatus" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form>
+    </div>
+<a href="log">LogOut</a>
+
+</body>
+</html>

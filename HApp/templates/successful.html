@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT Home Automation App</title>
+    <h1 style="font-size: xx-large;color: darkcyan;font-style: oblique" >IOT Home Automation APP</h1>
+</head>
+<body align='center'style="background: lawngreen center">
+<h1 style="align-content: center; font-size: xx-large; font-style: italic ">You have Successfully added {{ usernames }}</h1>
+<a href="dc" >Device Controler</a>
+<a href="upda">Update Devices</a>
+<a href="dd" >Delete Devices</a>
+<a href="dl" >Device List</a>
+<a href="atd">Active Devices List</a>
+<a href="iatd">InActive Devices List</a></br></br>
+<a href="log">LogOut</a>
+<div style="alignment: center;font-size: xx-large;align-self: center;">
+<form action="cu" method="post"  >
+    {% csrf_token %}
+    <input type="submit" value="CreateUser" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form>
+    <form action="log" method="post"  >
+    {% csrf_token %}
+    <input type="submit" value="Login" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+    </div>
+</body>
+</html>

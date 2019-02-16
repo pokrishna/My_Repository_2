@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table >
+    <th>Device Name</th><th>Device Status</th><th colspan="2">Action</th><th>UserName</th>
+    {% for i in list_data %}
+        <form action="UserDeviceCon1" method="post">
+                {% csrf_token %}
+
+                <tr><td>{{ i.device_name }}</td><td>{{ i.device_status }}</td>
+                    <input name="dname" type="hidden" value={{i.device_name}}/>
+                    <input name="desc" type="hidden" value={{ i.device_desc }}/>
+                    <input name="doperator" type="hidden" value={{ i.device_operator }}/>
+                    <td><input type="submit" name='ac' value="ON"/></td>
+                    <td><input type="submit" name='ac' value="OFF"/></td>
+                        <td>{{ i.device_operator }}</td>
+                </tr>
+        </form>
+    {% endfor %}
+</table>
+
+</body>
+</html>

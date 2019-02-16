@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+    <style>
+        p {
+            color : red;
+            text-align : center;
+        }
+        #para1 {
+            color : blue;
+            text-align : left;
+        }
+        .krishna {
+
+            color:green;
+            text-align:right;
+        }
+        h1.vishnu {
+            text-align:center; color : yellow;
+        }
+        p.bhanu{
+            text-align:center; color: rosybrown;
+        }
+        p.soughandika{
+            font-size:300%;font-style: italic;
+        }
+    </style>
+
+</head>
+<body>
+<p>Hello world </p>
+<p id="para1">Hai this is para1 id </p>
+<p class="vishnu">Hai this is krishna class name</p>
+<h1 id="vishnu">hai h1 from id para1</h1>
+<h1 class="krishna">hai h1 from krishna class</h1>
+<p class="vishnu">hai this is vishnu</p>
+<p class="bhanu">Hai this is bhanu</p>
+<p class="soughandika">Hai this is soughandika</p>
+<p class="bhanu soughandika">Hai this is bhanu and soughandika</p>
+<h1>Hai this CSS tag</h1>
+</body>
+</html>

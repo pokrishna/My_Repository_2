@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ usname }} welcome to user portal </h1>
+<form action="UserDeviceCon" method="post"  >
+    {% csrf_token %}
+    <input type="text" hidden value={{ usname }} name='uname'/>
+    <input type="submit" value="Device Controler" style="height: 35px;width: 150px;font-face: 'Goudy Old Style';background-color: darkseagreen"/>
+</form></br>
+
+
+</body>
+</html>

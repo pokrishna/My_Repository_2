@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT Home Automation App</title>
+    <h1 style="font-size: xx-large;color: lavender;font-style: oblique" >IOT Home Automation APP</h1>
+</head>
+<body align="center" bgcolor="blue" >
+<form action="lg" method="post" >
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter the user name" autofocus style="background: lemonchiffon" pattern="[a-zA-Z]{3, }" title='Name must contain Alphabets only'/><br/></br>
+    <input type="password" name="password" placeholder="Enter the user Password" style="background: lemonchiffon"/><br/></br>
+    <label>User :</label><input type="radio" name="useradmin" value="user"/>
+    <label>Admin :</label><input type="radio" name="useradmin" value="admin"/><br/></br>
+<input type="submit" value="Login" style="background: lemonchiffon; height:50px;width:150px;color: darkblue "/><label>       </label><button type="reset" value="Reset" clear="" style="background: lemonchiffon; height:50px;width:150px;color: darkblue">Reset</button>
+</form>
+</body>
+</html>

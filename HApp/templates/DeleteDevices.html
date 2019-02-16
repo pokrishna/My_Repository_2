@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT Home Automation App</title>
+    <h1 style="font-size: xx-large;color: lavender;font-style: oblique" >IOT Home Automation APP</h1>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+</head>
+<body align='center' style="background: darkolivegreen ">
+<h2  style="color: yellow; font-size:36px">Delete the  Hardware Devices</h2>
+<a href="dc" >Device Controler</a>
+<a href="upda">Update Devices</a>
+<a href="dd" >Delete Devices</a>
+<a href="dl" >Device List</a>
+<a href="atd">Active Devices List</a>
+<a href="iatd">InActive Devices List</a></br></br>
+<a href="log">LogOut</a>
+
+
+<table align="center" border="2px" color="white">
+    <th>Device Name</th><th>Device Desc</th><th>Device Status</th><th>Action Delete</th>
+    {% for i in list_data %}
+        <form action="dd1" method="post">
+                {% csrf_token %}
+                <tr><td>{{ i.device_name }}</td><td>{{ i.device_desc }}</td><td>{{ i.device_status }}</td>
+                    <input name="dname" type="hidden" value={{i.device_name}}/>
+                    <input name="desc" type="hidden" value={{ i.device_desc }}/>
+                    <td><input type="submit" name='ac' value="DELETE"/></td>
+
+                </tr>
+        </form>
+    {% endfor %}
+</table>
+</body>
+</html>

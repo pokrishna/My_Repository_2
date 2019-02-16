@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT Home Automation </title>
+    <style>
+        th,td{
+            border:2px solid snow;
+            padding:4px
+        }
+
+    </style>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+</head>
+<body style="background-color:slategray; font-size: large;color:whitesmoke;align-content: center">
+<h1 align="center">Users List With there Roles</h1>
+
+
+<table style="border:5px solid slategray; margin:auto;">
+    <th>User Name</th><th>Password</th><th>Role</th>
+    {% for i in list_user %}
+    <tr><td>{{ i.username  }}</td><td>{{ i.password }}</td><td>{{ i.usertype }}</td></tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

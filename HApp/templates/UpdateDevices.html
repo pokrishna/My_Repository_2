@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT Home Automation App</title>
+    <h1 style="font-size: xx-large;color: lavender;font-style: oblique" >IOT Home Automation APP</h1>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+</head>
+<body align='center' style="background: darkolivegreen">
+<h2  style="color: yellow; font-size:36px">Update the  Hardware Devices</h2>
+</br>
+</br>
+</br>
+<a href="dc" >Device Controler</a>
+<a href="upda">Update Devices</a>
+<a href="dd" >Delete Devices</a>
+<a href="dl" >Device List</a>
+<a href="atd">Active Devices List</a>
+<a href="iatd">InActive Devices List</a></br></br>
+<a href="log">LogOut</a>
+
+<form action="et" method="post">
+    {% csrf_token %}
+    <input type="text" name="id" placeholder="Enter Device ID" autofocus/>
+    <input type="submit" value="Search"/>
+</form>
+<p>{{ fyi }}</p>
+<p>{{ i.device_name }}{{ i.device_desc }}{{ i.device_status }}</p>
+<form action="upda2" method="post">
+    {% csrf_token %}
+    <input type="text" name="dname" placeholder="Enter the Device Name" style="background-color: lightgoldenrodyellow"/></br></br>
+    <input type="text" name="ddesc" placeholder="Enter the Device Description" style="background-color: lightgoldenrodyellow"/></br></br>
+    <input type="text" name="dstatus" placeholder="Enter the Device Status" style="background-color: lightgoldenrodyellow"/></br></br>
+    <input type="submit" value="Add Device"/>      <input type="reset" value="Clear"/>
+</form>
+</body>
+</html>

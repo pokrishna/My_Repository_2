@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IOT Home Automation APP</title>
+    <h1 style="font-size: xx-large;color: lavender;font-style: oblique" >IOT Home Automation APP</h1>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+</head>
+<body align="center" bgcolor="blue" >
+<h2 style="font-size: xx-large;color: lavender;font-style: oblique" >User / Admin Registration Form</h2>
+<a href="dc" >Device Controler</a>
+<a href="upda">Update Devices</a>
+<a href="dd" >Delete Devices</a>
+<a href="dl" >Device List</a>
+<a href="atd">Active Devices List</a>
+<a href="iatd">InActive Devices List</a></br></br>
+<a href="log">LogOut</a>
+
+<form action="reg" method="post">
+        {% csrf_token %}
+    <input type="text" name="username" placeholder="Enter the user/admin name" style="background: lemonchiffon" pattern="[a-zA-Z]{3, }" title='Name must contain Alphabets only'/><br/></br>
+    <input type="password" name="password" placeholder="Enter the user/admin Password" style="background: lemonchiffon;"/><br/></br>
+    <label>User :</label><input type="radio" name="useradmin" value="user"/>
+    <label>Admin :</label><input type="radio" name="useradmin" value="admin"/><br/></br>
+<input type="submit" value="Register" style="background: lemonchiffon; height:50px;width:150px;color: darkblue "/><label>       </label><button type="reset" value="Reset" clear="" style="background: lemonchiffon; height:50px;width:150px;color: darkblue">Reset</button>
+</form>
+
+</body>
+</html>
